@@ -17,7 +17,7 @@
         setTimeout(function() {
             if(['/dashboard','/','/subscribe','/about','/ba','/press','/terms'].indexOf(window.location.pathname)===-1 && (window.location.host === 'plug.dj'||window.location.host==='stg.plug.dj')){
                 $.getScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js',function () {
-                    setTimeout(function(){$.getScript('https://raw.fuechschen.space/bentenz5/NCS_PlugDj/master/ncs.js');},3000);
+                    setTimeout(function(){$.getScript('https://rawgit.com/Satskhi/ScriptTest/master/js/ncs.js');},3000);
                 });
             }
         }, 2500);

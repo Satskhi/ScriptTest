@@ -69,7 +69,7 @@ if (typeof NCSload !== 'undefined') {
     var versionMsg = "No, but better. :P";
     var ncApiKey = "6R9fc29cMLw615PBv98u072430tZ3E9c";
     var startUpMsg = "Welcome to NCS version " + version + " | " + versionMsg + "<br>";
-    var newFeaturesMsg = "<a href='https://github.com/bentenz5/NCS_PlugDj/blob/master/changelog.md' target='_blank'>Click here for the Changelog</a>";
+    var newFeaturesMsg = "<a href='https://github.com/Satskhi/ScriptTest/blob/master/changelog.md' target='_blank'>Click here for the Changelog</a>";
     var alertMsg = "This is a BETA build. It will buggy and likely missing a literal ton of features. Also the nekos may avoid you... ;_;";
     // OBSOLETE hiddenChat = false;
 
@@ -97,7 +97,7 @@ if (typeof NCSload !== 'undefined') {
     function updateCheck() {
         $.ajax({
             type: "GET",
-            url: "https://raw.fuechschen.space/bentenz5/NCS_PlugDj/master/latest.json"
+            url: "https://rawgit.com/Satskhi/ScriptTest/master/latest.json"
         }).done(function (data) {
             if (data.version != version) {
                 // notifLong("NCS has been updated! Refresh your page to get the latest update! | Current Version: " + version + " | New Version: " + data.version + " | <a href='" + data.changelog + "' target='_blank'>Changelog</a>");
@@ -118,8 +118,8 @@ if (typeof NCSload !== 'undefined') {
 }
 
 // NCS Styles
-$('head').append('<link href="https://raw.fuechschen.space/bentenz5/NCS_PlugDj/master/ncs.css" rel="stylesheet" type="text/css">');
-$('head').append('<link href="https://raw.fuechschen.space/bentenz5/NCS_PlugDj/master/menu.css" rel="stylesheet" type="text/css">');
+$('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/ncs.css" rel="stylesheet" type="text/css">');
+$('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/menu.css" rel="stylesheet" type="text/css">');
 
 
 // Show Startup Messages
@@ -511,7 +511,7 @@ function ncsThemeShit() {
     if (ncssettings.customThemeEnabled === false) {
         $('.ncs-theme-toggle').children('.ncs-menu-icon').show();
         setTimeout(function () {
-            $('head').append('<link id="NCSTheme" rel="stylesheet" href="https://raw.fuechschen.space/bentenz5/NCS_PlugDj/master/NCSTheme.css" type="text/css" />');
+            $('head').append('<link id="NCSTheme" rel="stylesheet" href="https://rawgit.com/Satskhi/ScriptTest/master/css/NCSTheme.css" type="text/css" />');
             $('.room-background').css('background-image','url(\'https://i.imgur.com/EFXFnql.png\')')
         }, 500);
         ncssettings.customThemeEnabled = true;

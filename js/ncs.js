@@ -69,7 +69,6 @@ if (typeof NCSload !== 'undefined') {
     var versionMsg = "No, but better. :P";
     var ncApiKey = "6R9fc29cMLw615PBv98u072430tZ3E9c";
     var startUpMsg = "Welcome to NCS version " + version + " | " + versionMsg + "<br>";
-    var newFeaturesMsg = "<a href='https://github.com/Satskhi/ScriptTest/blob/master/changelog.md' target='_blank'>Click here for the Changelog</a>";
     var alertMsg = "This is a BETA build. It will buggy and likely missing a literal ton of features. Also the nekos may avoid you... ;_;";
     // OBSOLETE hiddenChat = false;
 
@@ -124,7 +123,7 @@ $('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/m
 
 // Show Startup Messages
 $('#chat-messages').append('<center style=color:#A77DC2 class="cm ncs-greet">' +
-    [startUpMsg, newFeaturesMsg, alertMsg].join('<br>') + '</center>');
+    [startUpMsg, alertMsg].join('<br>') + '</center>');
 
 API.on(API.CHAT, afk);
 

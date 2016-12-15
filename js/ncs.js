@@ -257,25 +257,21 @@ var NCS = (function () {
 
     $('.app-right').append(models.menu);
 
-    $('#room').append('<span id="loli-counter">Loli count: 0</span>');
-    var lolis = 0;
     API.on(API.CHAT, function (msg) {
-        lolis += (msg.message.match(/loli/g) || []).length;
-        $('#loli-counter').text('Loli count: ' + lolis);
         // Developer Icon
         if ([4405644, 5751501, 4881577].indexOf(msg.uid) !== -1) {
             $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-developer')).children('.msg')).children('.from').prepend('<i title="NCS Developer" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/uerI4EX.png\')">')
         }
         // VIP Icon
-        if ([4537120].indexOf(msg.uid) !== -1) {
+        if ([4405644].indexOf(msg.uid) !== -1) {
             $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="NCS VIP" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/K9qSqOX.png\')">')
         }
         // Donator Icon
-        if ([5371972].indexOf(msg.uid) !== -1) {
+        if ([4405644].indexOf(msg.uid) !== -1) {
             $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="NCS Donator" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/naLYLHV.png\')">')
         }
         // Kidyeon Gif
-        if ([5371972].indexOf(msg.uid) !== -1) {
+        if ([4405644].indexOf(msg.uid) !== -1) {
             $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="Wizardly Editor" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/7m5XynH.gif\')">')
         }
     });

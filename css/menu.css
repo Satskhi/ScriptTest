@@ -17,8 +17,8 @@
     width: 50px;
 }
 #rcs-appright-button {
-    left: 287px;
-    width: 29px;
+    left: 287px !important;
+    width: 29px !important;
 }
 #ncs-menu-button {
     left: 316px !important;

@@ -263,7 +263,7 @@ var NCS = (function () {
         lolis += (msg.message.match(/loli/g) || []).length;
         $('#loli-counter').text('Loli count: ' + lolis);
         // Developer Icon
-        if ([4404760, 5751501, 4881577].indexOf(msg.uid) !== -1) {
+        if ([4405644, 5751501, 4881577].indexOf(msg.uid) !== -1) {
             $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-developer')).children('.msg')).children('.from').prepend('<i title="NCS Developer" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/uerI4EX.png\')">')
         }
         // VIP Icon

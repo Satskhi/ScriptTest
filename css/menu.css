@@ -1,12 +1,28 @@
 /* Putting this here because I accidently deleted it last time. :\ */
 
+#chat-button {
+    left: 0;
+    width: 50px;
+}
+#users-button {
+    left: 50px;
+    width: 85px;
+}
+#waitlist-button {
+    left: 135px;
+    width: 100px;
+}
+#friends-button {
+    left: 236px;
+    width: 50px;
+}
 #rcs-appright-button {
     left: 287px;
-    width: 28px;
+    width: 29px;
 }
 #ncs-menu-button {
-    left: 315px !important;
-    width: 28px !important;
+    left: 316px !important;
+    width: 29px !important;
 }
 
 .ncs-menu-button-info{

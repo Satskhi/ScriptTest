@@ -1,7 +1,3 @@
-// NCS for Plug.dj (PORT)
-
-// NCSTheme URI: https://rawgit.com/bentenz5/NCS_PlugDj/master/NCSTheme.css
-
 var svo = document.getElementsByClassName('.s-vo');
 
 function fixvideo() {
@@ -37,38 +33,38 @@ mut.observe(document.querySelector("#room"), {attributes: true});
 var loading = true;
 
 function notif(msg) {
-    $('.ncsLoaderNotification').remove();
-    $('#toast-notifications').append('<div class="notification ncs-notif-old ncsLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">' + msg + '</span></div>');
+    $('.OmegaLoaderNotification').remove();
+    $('#toast-notifications').append('<div class="notification Omega-notif-old OmegaLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">' + msg + '</span></div>');
     setTimeout(function () {
-        $('.ncsLoaderNotification').remove();
+        $('.OmegaLoaderNotification').remove();
     }, 5000);
 }
 
 function notifLong(msg) {
-    $('.ncsLoaderNotification').remove();
-    $('#toast-notifications').append('<div class="notification ncs-notif-old ncsLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">' + msg + '</span></div>');
+    $('.OmegaLoaderNotification').remove();
+    $('#toast-notifications').append('<div class="notification Omega-notif-old OmegaLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">' + msg + '</span></div>');
     setTimeout(function () {
-        $('.ncsLoaderNotification').remove();
+        $('.OmegaLoaderNotification').remove();
     }, 15000);
 }
 
 // IMPORT THAS ANGULAR.JS DAMN IT
-//Angular should already be loaded by the loader javascript:(function(){$.getScript('https://ncs-pdj-bentenz5.c9users.io/ncs/ncs-loader.js')}());
+//Angular should already be loaded by the loader javascript:(function(){$.getScript('https://Omega-pdj-bentenz5.c9users.io/Omega/Omega-loader.js')}());
 /*setTimeout(function() {
  $('head').append('<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>');
  }, 5000);*/
 
-var errorMsg = "It appears NCS is already running! If this is not the case please refresh and try again. If it still doesn't work, report this on github."
+var errorMsg = "It appears Omega is already running! If this is not the case please refresh and try again. If it still doesn't work, report this on github."
 
-if (typeof NCSload !== 'undefined') {
+if (typeof Omegaload !== 'undefined') {
     $('#chat-messages').append('<center style=color:#A77DC2 class="cm mention">' + errorMsg + '</center');
 } else {
-    var NCSload = true;
+    var Omegaload = true;
     var version = "0.0.8";
     var buildnumber = "00013";
     var versionMsg = "No, but better. :P";
     var ncApiKey = "6R9fc29cMLw615PBv98u072430tZ3E9c";
-    var startUpMsg = "Welcome to NCS version " + version + " | " + versionMsg + "<br>";
+    var startUpMsg = "Welcome to Omega version " + version + " | " + versionMsg + "<br>";
     var alertMsg = "This is a BETA build. It will buggy and likely missing a literal ton of features. Also the nekos may avoid you... ;_;";
     // OBSOLETE hiddenChat = false;
 
@@ -78,14 +74,14 @@ if (typeof NCSload !== 'undefined') {
 //function init() {
 
     //if(loading === true) {
-    //	$('#toast-notifications').append('<div class="notification ncs-notif-old ncsLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">Loading NCS... Please wait...</span></div>');
+    //	$('#toast-notifications').append('<div class="notification Omega-notif-old OmegaLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">Loading Omega... Please wait...</span></div>');
     //}
 
     //if(loading === false) {
-    //	$('.ncsLoaderNotification').remove();
-    //	$('#toast-notifications').append('<div class="notification ncs-notif-old ncsLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">NCS Version ' + version + ' loaded successfully!</span></div>');
+    //	$('.OmegaLoaderNotification').remove();
+    //	$('#toast-notifications').append('<div class="notification Omega-notif-old OmegaLoaderNotification" style="opacity: 1;"><div class="left"><i class="icon icon-about-white"></i></div><div class="right"><span style="top: 33.5px;">Omega Version ' + version + ' loaded successfully!</span></div>');
     //	setTimeout(function() {
-    //		$('.ncsLoaderNotification').remove();
+    //		$('.OmegaLoaderNotification').remove();
     //	}, 5000);
     //}
 //}
@@ -99,12 +95,12 @@ if (typeof NCSload !== 'undefined') {
             url: "https://rawgit.com/Satskhi/ScriptTest/master/latest.json"
         }).done(function (data) {
             if (data.version != version) {
-                // notifLong("NCS has been updated! Refresh your page to get the latest update! | Current Version: " + version + " | New Version: " + data.version + " | <a href='" + data.changelog + "' target='_blank'>Changelog</a>");
-                $('#chat-messages').append('<center style=color:#A77DC2 class="cm ncs-broadcast"><div class="mdi mdi-alert msg"></div> NCS has updated! Refresh your page to get the latest update!<br> <a href="' + data.changelog + '" target="_blank">Changelog</a> | New version: ' + data.version + '</center>');
-                console.log("[NCS] Update available");
+                // notifLong("Omega has been updated! Refresh your page to get the latest update! | Current Version: " + version + " | New Version: " + data.version + " | <a href='" + data.changelog + "' target='_blank'>Changelog</a>");
+                $('#chat-messages').append('<center style=color:#A77DC2 class="cm Omega-broadcast"><div class="mdi mdi-alert msg"></div> Omega has updated! Refresh your page to get the latest update!<br> <a href="' + data.changelog + '" target="_blank">Changelog</a> | New version: ' + data.version + '</center>');
+                console.log("[Omega] Update available");
                 //init();
             } else {
-                console.log("[NCS] Up to date!");
+                console.log("[Omega] Up to date!");
                 //init();
             }
         });
@@ -116,18 +112,18 @@ if (typeof NCSload !== 'undefined') {
     }, 1800000);
 }
 
-// NCS Styles
-$('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/ncs.css" rel="stylesheet" type="text/css">');
+// Omega Styles
+$('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/Omega.css" rel="stylesheet" type="text/css">');
 $('head').append('<link href="https://rawgit.com/Satskhi/ScriptTest/master/css/menu.css" rel="stylesheet" type="text/css">');
 
 
 // Show Startup Messages
-$('#chat-messages').append('<center style=color:#A77DC2 class="cm ncs-greet">' +
+$('#chat-messages').append('<center style=color:#A77DC2 class="cm Omega-greet">' +
     [startUpMsg, alertMsg].join('<br>') + '</center>');
 
 API.on(API.CHAT, afk);
 
-var ncssettings = $.extend({
+var Omegasettings = $.extend({
     autolike: false,
     eta: false,
     cbackground: false,
@@ -140,18 +136,18 @@ var ncssettings = $.extend({
     dlBtn: true,
     loaded: false,
     preventNavigation: false
-}, (JSON.parse(localStorage.getItem('ncs-settings')) || {}));
+}, (JSON.parse(localStorage.getItem('Omega-settings')) || {}));
 
-console.info((JSON.parse(localStorage.getItem('ncs-settings')) || {}));
+console.info((JSON.parse(localStorage.getItem('Omega-settings')) || {}));
 
 window.onbeforeunload = function (e) {
-    localStorage.setItem('ncs-settings', JSON.stringify(ncssettings));
+    localStorage.setItem('Omega-settings', JSON.stringify(Omegasettings));
 };
 
 $(window).on('beforeunload', function () {
     // Remove the cookie
-    var NCSLoad = false;
-    // delete localStorage.NCSload;
+    var OmegaLoad = false;
+    // delete localStorage.Omegaload;
 });
 
 // Functions and Stuffs
@@ -169,7 +165,7 @@ function redir(uri) {
 function downloadThasShit() {
     //var playersrc = grabVidId();
     window.open("https://embed.yt-mp3.com/watch?v=" + API.getMedia().cid);
-    console.log("[NCS] Downloaded Video!");
+    console.log("[Omega] Downloaded Video!");
 }
 
 function downloadThasShitV2() {
@@ -178,56 +174,56 @@ function downloadThasShitV2() {
 }
 
 // MENU
-var NCS = (function () {
+var Omega = (function () {
     var models = {
-        'tab': `<div id="ncs-menu-button" class="header-panel-button ncs-tab">
-                    <span class="icon-info ncs-menu-button-info">NCS</span>
+        'tab': `<div id="Omega-menu-button" class="header-panel-button Omega-tab">
+                    <span class="icon-info Omega-menu-button-info">Omega</span>
                 </div>`,
-        menu: `<div id="ncs-menu" style="display:none">
-                <div class="ncs-menu-header list-header"><span class="title">NCS Settings</span></div>
+        menu: `<div id="Omega-menu" style="display:none">
+                <div class="Omega-menu-header list-header"><span class="title">Omega Settings</span></div>
                 <div class="list staff jspScrollable" style="top: 40px !important; overflow: hidden; padding: 0px; outline: none; width: 345px; height: ${$(document).height() - 148}px" tabindex="0">
                     <div class="jspContainer" style="overflow: scroll; width: 340px; top:5px; height:${$(document).height() - 153}px">
                         <div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 331px;">
                             <div class="group">
-                                <div class="user ncs-menu-item item" id="ncs-woot-toggle" onclick="runautolike();">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span" id="ncs-woot-toggle">Auto-Woot</span>
+                                <div class="user Omega-menu-item item" id="Omega-woot-toggle" onclick="runautolike();">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span" id="Omega-woot-toggle">Auto-Woot</span>
                                 </div>
-                                <div class="user ncs-theme-toggle ncs-menu-item item" onclick="ncsThemeShit();">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">NCS Custom Theme</span>
+                                <div class="user Omega-theme-toggle Omega-menu-item item" onclick="OmegaThemeShit();">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Omega Custom Theme</span>
                                 </div>
-                                <div class="user ncs-join-toggle ncs-menu-item" onclick="runautojoin()">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Auto-Join</span>
+                                <div class="user Omega-join-toggle Omega-menu-item" onclick="runautojoin()">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Auto-Join</span>
                                 </div>
-                                <div class="user ncs-eta-toggle ncs-menu-item" onclick="toggleEta()">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">ETA</span>
+                                <div class="user Omega-eta-toggle Omega-menu-item" onclick="toggleEta()">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">ETA</span>
                                 </div>
-                                <div class="user ncs-dl-toggle ncs-menu-item" onclick="toggleDlBtn()">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Download Button</span>
+                                <div class="user Omega-dl-toggle Omega-menu-item" onclick="toggleDlBtn()">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Download Button</span>
                                 </div>
-                                <div class="user ncs-bg-toggle ncs-menu-item" onclick="backgroundSelect()">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Custom Background</span>
+                                <div class="user Omega-bg-toggle Omega-menu-item" onclick="backgroundSelect()">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Custom Background</span>
                                 </div>
-                                <div class="user ncs-accnav-toggle ncs-menu-item" onclick="toggleNavigation();">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Accidental Navigation Prevention</span>
+                                <div class="user Omega-accnav-toggle Omega-menu-item" onclick="toggleNavigation();">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Accidental Navigation Prevention</span>
                                 </div>
-                                <div class="user ncs-update-btn ncs-menu-item" onclick="updateCheck();">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Check for Updates</span>
+                                <div class="user Omega-update-btn Omega-menu-item" onclick="updateCheck();">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Check for Updates</span>
                                 </div>
-                                <div class="user ncs-donate-btn ncs-menu-item" onclick="redir('https://paypal.me/CSxKING');">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Donate to NCS!</span>
+                                <div class="user Omega-donate-btn Omega-menu-item" onclick="redir('https://paypal.me/CSxKING');">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Donate to Omega!</span>
                                 </div>
-                                <div class="user ncs-report-btn ncs-menu-item" onclick="redir('https://github.com/bentenz5/NCS_PlugDj/issues')">
-                                    <i class="icon icon-check-blue ncs-menu-icon"></i>
-                                    <span class="name ncs-menu-span">Found an issue? Report it here!</span>
+                                <div class="user Omega-report-btn Omega-menu-item" onclick="redir('https://github.com/bentenz5/Omega_PlugDj/issues')">
+                                    <i class="icon icon-check-blue Omega-menu-icon"></i>
+                                    <span class="name Omega-menu-span">Found an issue? Report it here!</span>
                                 </div>
                             </div>
                         </div>
@@ -239,17 +235,17 @@ var NCS = (function () {
     $('#header-panel-bar').append(models.tab);
     $('#header-panel-bar').click(function () {
         setTimeout(function () {
-            if (!$('#ncs-menu-button').hasClass('selected')) {
-                $('#ncs-menu').hide();
+            if (!$('#Omega-menu-button').hasClass('selected')) {
+                $('#Omega-menu').hide();
             }
         })
     });
-    $('#ncs-menu-button').click(function () {
-        if (!$('#ncs-menu-button').hasClass('selected')) {
+    $('#Omega-menu-button').click(function () {
+        if (!$('#Omega-menu-button').hasClass('selected')) {
             $(".header-panel-button").removeClass('selected')
-            $('#ncs-menu-button').addClass('selected');
+            $('#Omega-menu-button').addClass('selected');
             $('.app-right').children().hide();
-            $('#ncs-menu').show();
+            $('#Omega-menu').show();
         }
     });
 
@@ -260,19 +256,19 @@ var NCS = (function () {
     API.on(API.CHAT, function (msg) {
         // Developer Icon
         if ([4405644, 5751501, 4881577].indexOf(msg.uid) !== -1) {
-            $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-developer')).children('.msg')).children('.from').prepend('<i title="NCS Developer" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/uerI4EX.png\')">')
+            $($($('div[data-cid^="' + msg.cid + '"]').addClass('Omega-developer')).children('.msg')).children('.from').prepend('<i title="Omega Developer" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/uerI4EX.png\')">')
         }
         // VIP Icon
         if ([4405644].indexOf(msg.uid) !== -1) {
-            $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="NCS VIP" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/K9qSqOX.png\')">')
+            $($($('div[data-cid^="' + msg.cid + '"]').addClass('Omega-vip')).children('.msg')).children('.from').prepend('<i title="Omega VIP" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/K9qSqOX.png\')">')
         }
         // Donator Icon
         if ([4405644].indexOf(msg.uid) !== -1) {
-            $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="NCS Donator" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/naLYLHV.png\')">')
+            $($($('div[data-cid^="' + msg.cid + '"]').addClass('Omega-vip')).children('.msg')).children('.from').prepend('<i title="Omega Donator" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/naLYLHV.png\')">')
         }
         // Kidyeon Gif
         if ([4405644].indexOf(msg.uid) !== -1) {
-            $($($('div[data-cid^="' + msg.cid + '"]').addClass('ncs-vip')).children('.msg')).children('.from').prepend('<i title="Wizardly Editor" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/7m5XynH.gif\')">')
+            $($($('div[data-cid^="' + msg.cid + '"]').addClass('Omega-vip')).children('.msg')).children('.from').prepend('<i title="Wizardly Editor" class="icon"style="width:16px;height:16px;background: url(\'https://i.imgur.com/7m5XynH.gif\')">')
         }
     });
 
@@ -315,7 +311,7 @@ function saveResponse() {
     hideNotif();
 }
 
-$('#ncs-menu').append('<span id="ncsusers">0 people using NCS in 0 rooms!</span>');
+$('#Omega-menu').append('<span id="Omegausers">0 people using Omega in 0 rooms!</span>');
 
 function cooldown() {
     cd = true;
@@ -339,11 +335,11 @@ function runafk() {
     }
 }
 
-function NCSafkResponseChanger() {
+function OmegaafkResponseChanger() {
     showNotif('notif-afk-message');
 }
 
-if (ncssettings.autolike === true) {
+if (Omegasettings.autolike === true) {
     runautolike();
 }
 
@@ -352,100 +348,100 @@ setInterval(function () {
 }, 500);
 
 function runautolike() {
-    if (ncssettings.autolike === false) {
-        $('#ncs-woot-toggle').children('.ncs-menu-icon').show();
-        console.info('[NCS] Autolike Enabled.');
+    if (Omegasettings.autolike === false) {
+        $('#Omega-woot-toggle').children('.Omega-menu-icon').show();
+        console.info('[Omega] Autolike Enabled.');
         $('#auto-woot').addClass('active');
         $('#woot').click();
         API.on(API.ADVANCE, callback);
         function callback(obj) {
             $('#woot').click();
-            console.info('[NCS] Wooted track');
+            console.info('[Omega] Wooted track');
         }
 
-        ncssettings.autolike = true;
+        Omegasettings.autolike = true;
     } else {
-        $('#ncs-woot-toggle').children('.ncs-menu-icon').hide();
-        console.info('[NCS] Autolike Disabled.');
-        ncssettings.autolike = false;
+        $('#Omega-woot-toggle').children('.Omega-menu-icon').hide();
+        console.info('[Omega] Autolike Disabled.');
+        Omegasettings.autolike = false;
     }
 }
 
 
 function downloadMP3() {
-    $.getScript("https://musiqpad-ncs-bentenz5.c9users.io/musiqpad_port/modules/dl_mp3.js");
+    $.getScript("https://musiqpad-Omega-bentenz5.c9users.io/musiqpad_port/modules/dl_mp3.js");
 }
 
-if (ncssettings.autojoin === true) {
-    ncssettings.autojoin = false;
+if (Omegasettings.autojoin === true) {
+    Omegasettings.autojoin = false;
     runautojoin();
 }
 
 function customBackground() {
-    if (ncssettings.cbackground === true) {
+    if (Omegasettings.cbackground === true) {
 
     }
 }
 
 function toggleEta() {
-    if (ncssettings.eta === true) {
-        $('.ncs-eta-toggle').children('.ncs-menu-icon').hide();
-        ncssettings.eta = false;
-        console.info('[NCS] Disabled ETA.');
+    if (Omegasettings.eta === true) {
+        $('.Omega-eta-toggle').children('.Omega-menu-icon').hide();
+        Omegasettings.eta = false;
+        console.info('[Omega] Disabled ETA.');
     } else {
-        $('.ncs-eta-toggle').children('.ncs-menu-icon').show();
-        ncssettings.eta = true;
-        console.info('[NCS] Enabled ETA.');
+        $('.Omega-eta-toggle').children('.Omega-menu-icon').show();
+        Omegasettings.eta = true;
+        console.info('[Omega] Enabled ETA.');
     }
 }
 
 function djAlert() {
-    if (ncssettings.djalert === true) {
-        console.log('[NCS] DJ Alert Enabled.');
+    if (Omegasettings.djalert === true) {
+        console.log('[Omega] DJ Alert Enabled.');
         // If its enabled.
         API.on(API.advance, callback);
         function callback(obj) {
             djpos = API.getWaitListPosition();
             if (djpos === 0) {
-                console.log('[NCS] User is next in line. Alerting.');
+                console.log('[Omega] User is next in line. Alerting.');
             }
         }
     } else {
-        console.log('[NCS] DJ Alert Disabled.');
+        console.log('[Omega] DJ Alert Disabled.');
         // If its not enabled.
 
     }
 }
 
 function runautojoin() {
-    if (ncssettings.autojoin === false) {
-        $('.ncs-join-toggle').children('.ncs-menu-icon').show();
-        ncssettings.autojoin = true;
+    if (Omegasettings.autojoin === false) {
+        $('.Omega-join-toggle').children('.Omega-menu-icon').show();
+        Omegasettings.autojoin = true;
         setInterval(function () {
             var pos = API.getWaitListPosition() + 1;
             if (API.getWaitList().length < 50 && pos <= 1) {
                 if (pos <= 1) {
-                    console.info('[NCS] User is either DJ or not in waitlist. Attempting to join.');
+                    console.info('[Omega] User is either DJ or not in waitlist. Attempting to join.');
                     API.djJoin();
                 } else if (pos >= 1) {
-                    console.info('[NCS] User is still in waitlist at pos ' + pos + '. Waiting.');
+                    console.info('[Omega] User is still in waitlist at pos ' + pos + '. Waiting.');
                 }
             } else {
-                // console.warn('[NCS] Waitlist full. Waiting.');
+                // console.warn('[Omega] Waitlist full. Waiting.');
             }
         }, 1000);
-    } else if (ncssettings.autojoin === true) {
-        $('.ncs-join-toggle').children('.ncs-menu-icon').hide();
-        ncssettings.autojoin = false;
+    } else if (Omegasettings.autojoin === true) {
+        $('.Omega-join-toggle').children('.Omega-menu-icon').hide();
+        Omegasettings.autojoin = false;
     }
 }
 function songAdvance() {
-    if (ncssettings.autolike) {
+    if (Omegasettings.autolike) {
         if (!$('#woot').hasClass('selected') && !$('#meh').hasClass('selected') && $('#woot').hasClass('active')) {
             $('#woot').click();
         }
     }
-    if (ncssettings.autojoin === true && API.getWaitListPosition() === -1) {
+    if (Omegasettings.autojoin === true && API.getWaitListPosition() === -1) {
         API.djJoin();
     }
 }
@@ -453,68 +449,68 @@ function songAdvance() {
 $('#room-bg').append('<div id="newbg"></div>');
 function changeBackground() {
     showNotif('notif-background');
-    $('#background-input').val(ncssettings.backgroundurl);
+    $('#background-input').val(Omegasettings.backgroundurl);
 }
 
-if (ncssettings.cbackground === true) {
-    ncssettings.cbackground = false;
+if (Omegasettings.cbackground === true) {
+    Omegasettings.cbackground = false;
     applyBackground();
 }
 
 function backgroundSelect() {
-    if (ncssettings.cbackground === false) {
-        console.info('[NCS] Custom Background Enabled.');
+    if (Omegasettings.cbackground === false) {
+        console.info('[Omega] Custom Background Enabled.');
         var bgfile = prompt('Enter the link to a background. A resolution of 1600x900 is recomended.', 'https://i.imgur.com/EFXFnql.png');
-        ncssettings.backgroundurl = bgfile;
-        $('.room-background').css("background-image", " url('" + ncssettings.backgroundurl + "')");
-        $('.ncs-bg-toggle').children('.ncs-menu-icon').show();
-        ncssettings.cbackground = true;
+        Omegasettings.backgroundurl = bgfile;
+        $('.room-background').css("background-image", " url('" + Omegasettings.backgroundurl + "')");
+        $('.Omega-bg-toggle').children('.Omega-menu-icon').show();
+        Omegasettings.cbackground = true;
     } else {
-        console.info('[NCS] Custom Background Disabled.');
-        $('.ncs-bg-toggle').children('.ncs-menu-icon').hide();
-        ncssettings.cbackground = false;
+        console.info('[Omega] Custom Background Disabled.');
+        $('.Omega-bg-toggle').children('.Omega-menu-icon').hide();
+        Omegasettings.cbackground = false;
         $('.room-background').css("background-image", "url('https://cdn.plug.dj/_/static/images/community/background.ea778295-651f-4bb8-bc2f-9fa7e6a81876.jpg')");
     }
 }
 
 function applyBackground() {
-    if (ncssettings.cbackground === false) {
-        $('.ncs-bg-toggle').children('.ncs-menu-icon').show();
-        $('.room-background').css("background-image", " url('" + ncssettings.backgroundurl + "')");
-        ncssettings.cbackground = true;
+    if (Omegasettings.cbackground === false) {
+        $('.Omega-bg-toggle').children('.Omega-menu-icon').show();
+        $('.room-background').css("background-image", " url('" + Omegasettings.backgroundurl + "')");
+        Omegasettings.cbackground = true;
     }
     else {
-        $('.ncs-bg-toggle').children('.ncs-menu-icon').hide();
+        $('.Omega-bg-toggle').children('.Omega-menu-icon').hide();
         $('.room-background').css("background-image", "https://cdn.plug.dj/_/static/images/community/background.892bc86f530eb3f7a53a2cc60f0c0be481798175.jpg");
-        ncssettings.cbackground = false;
+        Omegasettings.cbackground = false;
     }
 }
 
 API.on(API.ADVANCE, checkUsers);
 function checkUsers() {
-    // This checks how many users on plug are using NCS and puts it in the menu.
-    $.getJSON('https://ncs.fuechschen.org/plug', function (data) {
-        document.getElementById('ncsusers').innerHTML = data.users + " people using NCS in " + data.rooms + " rooms!";
+    // This checks how many users on plug are using Omega and puts it in the menu.
+    $.getJSON('https://Omega.fuechschen.org/plug', function (data) {
+        document.getElementById('Omegausers').innerHTML = data.users + " people using Omega in " + data.rooms + " rooms!";
     })
 }
 
 // Theme Shit
 
-ncssettings.customThemeEnabled = false;
+Omegasettings.customThemeEnabled = false;
 
-function ncsThemeShit() {
-    if (ncssettings.customThemeEnabled === false) {
-        $('.ncs-theme-toggle').children('.ncs-menu-icon').show();
+function OmegaThemeShit() {
+    if (Omegasettings.customThemeEnabled === false) {
+        $('.Omega-theme-toggle').children('.Omega-menu-icon').show();
         setTimeout(function () {
-            $('head').append('<link id="NCSTheme" rel="stylesheet" href="https://rawgit.com/Satskhi/ScriptTest/master/css/NCSTheme.css" type="text/css" />');
+            $('head').append('<link id="OmegaTheme" rel="stylesheet" href="https://rawgit.com/Satskhi/ScriptTest/master/css/OmegaTheme.css" type="text/css" />');
             $('.room-background').css('background-image','url(\'https://i.imgur.com/EFXFnql.png\')')
         }, 500);
-        ncssettings.customThemeEnabled = true;
+        Omegasettings.customThemeEnabled = true;
     }
     else {
-        $('.ncs-theme-toggle').children('.ncs-menu-icon').hide();
-        $('#NCSTheme').remove();
-        ncssettings.customThemeEnabled = false;
+        $('.Omega-theme-toggle').children('.Omega-menu-icon').hide();
+        $('#OmegaTheme').remove();
+        Omegasettings.customThemeEnabled = false;
     }
 }
 
@@ -540,7 +536,7 @@ var ETAInterval = setInterval(function () {
     var position = API.getWaitListPosition()
     position = (position < 0) ? API.getWaitList().length : position;
     var eta = ~~((position * (3.5 * 60)) + (API.getTimeRemaining()));
-    if (ncssettings.eta === true) {
+    if (Omegasettings.eta === true) {
         $('#etacount').show();
         eta1 = eta;
         $('#dj-button').attr('data-eta', 'ETA: ' + readable(eta));
@@ -554,35 +550,35 @@ var ETAInterval = setInterval(function () {
 
 // Fullscreen-Video fix
 if ($('#room').hasClass('video-only')) {
-    console.warn('[NCS] Video-Only mode is Enabled! Applying fix!');
+    console.warn('[Omega] Video-Only mode is Enabled! Applying fix!');
     $('#room').removeClass('video-only');
     setTimeout(function () {
         $('#room').addClass('video-only');
     }, 500);
 } else {
-    console.info('[NCS] Video-Only Mode is not Enabled! No fix required!');
+    console.info('[Omega] Video-Only Mode is not Enabled! No fix required!');
 }
 
-if (ncssettings.eta === true) {
-    ncssettings.autojoin = false;
+if (Omegasettings.eta === true) {
+    Omegasettings.autojoin = false;
     runeta();
 }
 
 var eta = "";
 
 function runeta() {
-    if (ncssettings.eta === false) {
+    if (Omegasettings.eta === false) {
         $('#eta').addClass('active');
-        ncssettings.eta = true;
+        Omegasettings.eta = true;
     }
     else {
         $('#eta').removeClass('active');
         $('#dj-button').removeAttr('data-eta', 'ETA: ' + readable(eta));
-        ncssettings.eta = false;
+        Omegasettings.eta = false;
     }
 }
 
-function applyNCStheme() {
+function applyOmegatheme() {
 
 }
 
@@ -593,7 +589,7 @@ function saveResponse() {
 }
 
 function saveBackground() {
-    ncssettings.backgroundurl = $('#background-input').val();
+    Omegasettings.backgroundurl = $('#background-input').val();
     applyBackground();
     hideNotif();
 }
@@ -613,12 +609,12 @@ function hideNotif() {
 
 // Desktop Notifcations by Gatt
 
-var notifcationsEnabled = ncssettings.desktopnotifications;
+var notifcationsEnabled = Omegasettings.desktopnotifications;
 
 function loadDesktopNotifs() {
     if (notifcationsEnabled === true) {
         if (!Notification) {
-            alert('[NCS] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.')
+            alert('[Omega] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.')
         } else if (Notification.permission !== "granted") {
             Notification.requestPermission()
         }
@@ -635,10 +631,10 @@ function loadDesktopNotifs() {
 
 function toggleDesktopNotifications() {
     notifcationsEnabled = !notifcationsEnabled;
-    ncssettings.desktopnotifications = notifcationsEnabled;
+    Omegasettings.desktopnotifications = notifcationsEnabled;
     if (notifcationsEnabled === true) {
         if (!Notification) {
-            alert('[NCS] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.')
+            alert('[Omega] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.')
         } else if (Notification.permission !== "granted") {
             Notification.requestPermission()
         }
@@ -657,7 +653,7 @@ var songdurationalert = true;
 function loadSongDurationAlert() {
     if (songdurationalert === true) {
         if (!Notification) {
-            alert('[NCS] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.');
+            alert('[Omega] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.');
         } else if (Notification.permission !== "granted") {
             Notification.requestPermission()
         }
@@ -672,25 +668,25 @@ function loadSongDurationAlert() {
 }
 
 function toggleDlBtn() {
-    if (ncssettings.dlbtn === true) {
-        $('#NCSDlBtn').remove();
-        console.info('[NCS] Download Button Disabled');
-        ncssettings.dlbtn = false;
-        $('.ncs-dl-toggle').children('.ncs-menu-icon').hide();
+    if (Omegasettings.dlbtn === true) {
+        $('#OmegaDlBtn').remove();
+        console.info('[Omega] Download Button Disabled');
+        Omegasettings.dlbtn = false;
+        $('.Omega-dl-toggle').children('.Omega-menu-icon').hide();
     } else {
-        $('#vote').append('<div id="NCSDlBtn" class="crowd-response" onclick="downloadThasShitV2();"><div class="top">Download</div><div class="bottom">MP3</div></div>');
-        console.info('[NCS] Download Button Enabled');
-        ncssettings.dlbtn = true;
-        $('.ncs-dl-toggle').children('.ncs-menu-icon').show();
+        $('#vote').append('<div id="OmegaDlBtn" class="crowd-response" onclick="downloadThasShitV2();"><div class="top">Download</div><div class="bottom">MP3</div></div>');
+        console.info('[Omega] Download Button Enabled');
+        Omegasettings.dlbtn = true;
+        $('.Omega-dl-toggle').children('.Omega-menu-icon').show();
     }
 }
 
 function toggleSongDurationAlert() {
     songdurationalert = !songdurationalert;
-    ncssettings.moderatorsongdurationalert = songdurationalert;
+    Omegasettings.moderatorsongdurationalert = songdurationalert;
     if (songdurationalert === true) {
         if (!Notification) {
-            alert('[NCS] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.');
+            alert('[Omega] You do not have notifications and therefore this option is not available. Please use a modern version of Chrome, Firefox, Opera or Firefox.');
         } else if (Notification.permission !== "granted") {
             Notification.requestPermission()
         }
@@ -737,16 +733,16 @@ function alertSong(data) {
 
 }
 
-if (ncssettings.preventNavigation) {
+if (Omegasettings.preventNavigation) {
     window.onbeforeunload = function () {
         return 'You sure? You told us to ask this.';
     };
 }
 
 function toggleNavigation() {
-    ncssettings.preventNavigation = !ncssettings.preventNavigation;
-    if (ncssettings.preventNavigation) {
-        $('.ncs-accnav-toggle').children('.ncs-menu-icon').show();
+    Omegasettings.preventNavigation = !Omegasettings.preventNavigation;
+    if (Omegasettings.preventNavigation) {
+        $('.Omega-accnav-toggle').children('.Omega-menu-icon').show();
         window.onbeforeunload = function () {
             return 'You sure? You told us to ask this.';
         };
@@ -754,7 +750,7 @@ function toggleNavigation() {
         window.onbeforeunload = function () {
 
         };
-        $('.ncs-accnav-toggle').children('.ncs-menu-icon').hide();
+        $('.Omega-accnav-toggle').children('.Omega-menu-icon').hide();
     }
 }
 
@@ -762,30 +758,30 @@ function toggleNavigation() {
 // Won't edit below this line. This is Fuechschen's thing ;3
 
 //Socket
-var ncssocket = null;
-var ncssockettries = 0;
+var Omegasocket = null;
+var Omegasockettries = 0;
 function initWebSocket() {
     try {
-        ncssocket = new WebSocket('wss://ncs.fuechschen.org/plug');
-        ncssocket.onerror = function () {
-            console.log('[NCS] WebSocket-Connection failed.');
-            ncssocket.close();
-            ncssockettries = ncssockettries + 1;
+        Omegasocket = new WebSocket('wss://Omega.fuechschen.org/plug');
+        Omegasocket.onerror = function () {
+            console.log('[Omega] WebSocket-Connection failed.');
+            Omegasocket.close();
+            Omegasockettries = Omegasockettries + 1;
             setTimeout(initWebSocket, 10 * 1000);
         };
-        ncssocket.onclose = function () {
+        Omegasocket.onclose = function () {
             setTimeout(initWebSocket, 10 * 1000);
         };
-        ncssocket.onopen = function () {
-            ncssockettries = 0;
+        Omegasocket.onopen = function () {
+            Omegasockettries = 0;
         };
-        ncssocket.onmessage = function (msg) {
+        Omegasocket.onmessage = function (msg) {
             if (msg.data !== 'h') {
                 try {
                     var pmsg = JSON.parse(msg.data);
                     switch (pmsg.t) {
                         case 'auth':
-                            ncssocket.send(JSON.stringify({
+                            Omegasocket.send(JSON.stringify({
                                 t: 'auth',
                                 d: {room: window.location.pathname, user: API.getUser().id}
                             }));
@@ -793,31 +789,31 @@ function initWebSocket() {
                         case 'broadcast':
                             switch (pmsg.d.t) {
                                 case 'system':
-                                    API.chatlog('[NCS] ' + pmsg.d.m);
+                                    API.chatlog('[Omega] ' + pmsg.d.m);
                                     break;
-                                case 'ncs_msg':
-                                    $('#chat-messages').append('<center style=color:#A77DC2 class="cm ncs-greet">' + pmsg.d.m + '</center>');
+                                case 'Omega_msg':
+                                    $('#chat-messages').append('<center style=color:#A77DC2 class="cm Omega-greet">' + pmsg.d.m + '</center>');
                                     break;
                                 default:
-                                    API.chatlog('[NCS] ' + pmsg.d.m);
+                                    API.chatlog('[Omega] ' + pmsg.d.m);
                                     break;
                             }
                             if (pmsg.d.a) audioElement.play();
-                            console.log('[NCS] Recieving message from NCS-Staff: ' + pmsg.d.m);
+                            console.log('[Omega] Recieving message from Omega-Staff: ' + pmsg.d.m);
                             break;
                         default:
                             break;
                     }
                 } catch (e) {
-                    console.log('[NCS] Recieved invalid JSON');
+                    console.log('[Omega] Recieved invalid JSON');
                 }
             }
         };
     } catch (e) {
-        if (ncssockettries > 4) console.log('[NCS] WebSocket-Connection failed.');
+        if (Omegasockettries > 4) console.log('[Omega] WebSocket-Connection failed.');
         else {
             setTimeout(initWebSocket, 10 * 1000);
-            ncssockettries = ncssockettries + 1;
+            Omegasockettries = Omegasockettries + 1;
         }
     }
 }
@@ -825,4 +821,4 @@ function initWebSocket() {
 
 initWebSocket();
 loading = false;
-ncssettings.loaded = true;
+Omegasettings.loaded = true;

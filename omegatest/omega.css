@@ -371,16 +371,3 @@ input#background-input {
 .omegaBtnHover:hover {
     background: rgba(146, 90, 255, .25);
 }
-
-/* omega Menu's User Count */
-#omegausers {
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    color: #2d2a2a;
-}
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help

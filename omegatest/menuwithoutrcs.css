@@ -23,10 +23,12 @@
 }
 
 .omega-menu-button-info{
-    top:18px;
+    top:13px;
     position: relative;
 }
-
+.omega-menu-button-info .i.icon {
+	left: -11px;
+}
 #omega-menu .header {
     top:0;
     left:0;
